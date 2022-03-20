@@ -13,9 +13,9 @@ function createAparts(id,[...img],title, district,notes,...apart){
 createAparts('vyborgsky',
 
 [
-  '../../cdn/img/vyborgsky/01.jpeg',
-'../../cdn/img/vyborgsky/02.jpeg',
-'../../cdn/img/vyborgsky/03.jpeg'
+  './cdn/img/vyborgsky/01.jpeg',
+'./cdn/img/vyborgsky/02.jpeg',
+'./cdn/img/vyborgsky/03.jpeg'
 ],
 
 'ЖК Выборгский', 'м. Московская','Мебилировка зависит от сценария',
@@ -70,11 +70,11 @@ Apart('vyborgsky','20','студия',27500,'корпус 2','06.2022'),
 
 createAparts('partnera',
 [
-  '../../cdn/img/partnera/01.jpeg',
-  '../../cdn/img/partnera/02.jpeg',
-  '../../cdn/img/partnera/03.jpeg',
-  '../../cdn/img/partnera/04.jpeg',
-  '../../cdn/img/partnera/05.jpeg'
+  './cdn/img/partnera/01.jpeg',
+  './cdn/img/partnera/02.jpeg',
+  './cdn/img/partnera/03.jpeg',
+  './cdn/img/partnera/04.jpeg',
+  './cdn/img/partnera/05.jpeg'
 ],
 
 'ЖК Партнера','м. Фрунзенская','',

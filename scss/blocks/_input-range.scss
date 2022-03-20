@@ -22,11 +22,6 @@
     background: #777990;
   }
 
-  // .rangeMinPrice:focus::-webkit-slider-runnable-track,
-  // .rangeMaxPrice:focus::-webkit-slider-runnable-track {
-  //   background: #df5d12;
-  // }
-
   .rangeMinPrice::-webkit-slider-thumb,
   .rangeMaxPrice::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -66,11 +61,4 @@
     opacity: 0.9;
     outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
   }
-
-  // input[type="range"]:focus {
-  //   opacity: 0.7;
-
-  //   // outline: none;
-  //   /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
-  // }
 }

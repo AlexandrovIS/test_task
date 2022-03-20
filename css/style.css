@@ -768,7 +768,7 @@ body {
 }
 
 .photos_and_tags .nameplates_list .live::before {
-  content: url(../../cdn/dot.svg);
+  content: url("../cdn/dot.svg");
 }
 
 .photos_and_tags .nameplates_list .offers {
@@ -838,7 +838,7 @@ body {
 
 .informations .aparts_list .delivery_data__list .delivery_data__item:first-child .arrow_btn {
   cursor: pointer;
-  background: url("../../cdn/arrow.svg") center no-repeat;
+  background: url("../cdn/arrow.svg") center no-repeat;
   margin-left: 10px;
   width: 10px;
   height: 15px;
@@ -857,7 +857,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: url("../../cdn/background.jpeg") no-repeat;
+  background: url("../cdn/background.jpeg") no-repeat;
 }
 
 .advertisement_background .advertisement-box {

@@ -23,21 +23,16 @@
       border-radius: 20px;
 
       .photo_item {
-        // display: none;
         opacity: 0;
         transition: opacity 1500ms ease-in-out;
       }
 
       .photo_item_active {
-        // display: flex;
         opacity: 1;
       }
 
       img {
-        // z-index: 1;
         height: 100%;
-        // transform: scale(2);
-        // transition: transform 700ms ease-in-out;
       }
       img:hover {
         transform: scale(1);
@@ -154,7 +149,7 @@
       left: 20px;
     }
     .live::before {
-      content: url(../../cdn/dot.svg);
+      content: url("../cdn/dot.svg");
     }
 
     .offers {
@@ -208,7 +203,7 @@
 
         .arrow_btn {
           cursor: pointer;
-          background: url("../../cdn/arrow.svg") center no-repeat;
+          background: url("../cdn/arrow.svg") center no-repeat;
           margin-left: 10px;
           width: 10px;
           height: 15px;
@@ -226,7 +221,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  background: url("../../cdn/background.jpeg") no-repeat;
+  background: url("../cdn/background.jpeg") no-repeat;
 
   .advertisement-box {
     margin: 30px 0;
