@@ -8,6 +8,9 @@ import {render} from './js_modules/renders/render.js'
 
 const roomList=document.querySelectorAll('#numOfRoomsList li')
 const deliveryList=document.querySelectorAll('#delivery li input')
+const formBtn=document.getElementById('getFormInfo')
+const minInput=document.getElementById('inputMinPrice')
+const maxInput=document.getElementById('inputMaxPrice')
 
 const collectionActiveRoom=[]
 const collectionActiveDelivery=[]
@@ -46,11 +49,9 @@ function launchFilter(paramName, collectionName,filterName){
 }
 
 function priceInstruction(min,max){
-
-  // const res=priceFilter(currentBase,min,max)
-  // currentBase.length=0
-  // currentBase = JSON.parse(JSON.stringify(res))
-  // console.log(currentBase)
+  let arr= choiseRenderArray(currentBase,roomsFilterResult,deliveryFilterResult)
+  let arrForRender=priceFilter(arr,min,max)
+  render(arrForRender)
 }
 
 function choiseRenderArray(currentArr, roomsArr, deliveryArr){
@@ -111,8 +112,7 @@ function choiseRenderArray(currentArr, roomsArr, deliveryArr){
 
     roomsArr.length<deliveryArr.length? firstArr=JSON.parse(JSON.stringify(roomsArr)) : firstArr=JSON.parse(JSON.stringify(deliveryArr))
     roomsArr.length>=deliveryArr.length? secondArr=JSON.parse(JSON.stringify(roomsArr)) : secondArr=JSON.parse(JSON.stringify(deliveryArr))
-    console.log(firstArr)
-    console.log(secondArr)
+    
     firstArr.forEach(currentEl=>{
       
       const result=new ApartmentComplex(currentEl.img,currentEl.title, currentEl.district,currentEl.notes)
@@ -148,5 +148,6 @@ roomList.forEach(el=>el.addEventListener('click',roomInstruction))
 deliveryList.forEach(el=>el.addEventListener('click',deliveryInstruction))
 // priceInstruction(3000000,4000000)
 
-
-
+formBtn.addEventListener('click',()=>{
+  priceInstruction(minInput.value,maxInput.value)
+})

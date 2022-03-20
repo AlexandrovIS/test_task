@@ -11,5 +11,4 @@ export default function Apart(title,apartNum,numOfRooms, price,corpus,delivery){
     this.price=price*EXCAHGE_RATE,
     this.corpus=corpus,
     this.delivery=delivery
-  
 }

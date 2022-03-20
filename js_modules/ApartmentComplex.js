@@ -10,4 +10,5 @@ export default class ApartmentComplex{
   addApart(apart){
     this.aparts.push(apart)
   }
+
 }
