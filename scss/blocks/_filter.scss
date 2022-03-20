@@ -1,0 +1,135 @@
+@import "./input-range";
+
+.filter {
+  margin-top: 117px;
+  position: relative;
+  @include font(16, 20, 500, normal, #ffffff);
+  background-color: #5e6076;
+  border-radius: 20px;
+  padding: 30px;
+
+  .rooms_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 5px;
+    margin-bottom: 30px;
+
+    li:first-child {
+      width: 110px;
+      text-align: left;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+    li:last-child {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    li {
+      padding: 10px;
+      border: 1px solid #777990;
+      box-sizing: border-box;
+      flex-grow: 1;
+      text-align: center;
+      transition: background-color 500ms ease-in-out;
+    }
+
+    .active {
+      background-color: #777990;
+    }
+  }
+
+  .price_list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    li {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #777990;
+      border-radius: 5px;
+      padding: 10px;
+      span {
+        @include font(14, 20, 500, normal, #abadc5);
+      }
+
+      input {
+        @include font(16, 20, 500, normal, #fff);
+        width: 150px;
+        background-color: #5e6076;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  .range_list {
+    position: relative;
+    pointer-events: none;
+  }
+
+  .delivery_list {
+    margin: 60px 0 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    li {
+      input {
+        display: none;
+      }
+    }
+
+    label:before {
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      outline: 1px solid #777990;
+      margin-right: 10px;
+      transition: background-color 500ms ease-in-out;
+    }
+
+    input:checked + label:before {
+      background-color: #777990;
+    }
+  }
+
+  .district_list {
+    border: 1px solid #777990;
+    border-radius: 5px;
+    padding: 10px;
+    @include font(14, 17, 500, normal, #abadc5);
+
+    li {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .formBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    gap: 10px;
+    bottom: -60px;
+    left: 0;
+
+    span {
+      color: #5e6076;
+    }
+
+    .filter_btn {
+      @include font(14, 17, 600, normal, #fff);
+      padding: 15px 10px;
+      background-color: #da552f;
+      border-radius: 10px;
+    }
+  }
+}

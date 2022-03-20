@@ -1,0 +1,29 @@
+.wrapper {
+  margin: 0 auto;
+  padding: 0 50px;
+  max-width: 1440px;
+  display: grid;
+  grid-gap: 60px;
+  grid-template-columns: 962px 318px;
+  grid-template-areas:
+    "header  header"
+    "content filter"
+    "footer footer";
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: content;
+  position: relative;
+}
+
+.filter_grid {
+  grid-area: filter;
+}
+
+.footer {
+  grid-area: footer;
+}

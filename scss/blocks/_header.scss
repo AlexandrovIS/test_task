@@ -1,0 +1,67 @@
+.header {
+  padding: 20px 0;
+
+  .header_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+
+    .nav_links {
+      width: 320px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 7px;
+      @include font(12, 15, 500, normal, #5e6076);
+    }
+
+    .header_btn {
+      padding: 10px;
+      @include font(14, 17, 600, normal, #fff);
+      border-radius: 12px;
+      background-color: #da552f;
+    }
+
+    .status {
+      @include font(14, 17, 500, normal, #5e6076);
+      position: relative;
+    }
+    .status::before {
+      content: ".";
+      color: transparent;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background-color: #da552f;
+      position: absolute;
+      top: 3px;
+      left: -13px;
+    }
+
+    .tel_info {
+      @include font(14, 17, 600, normal, #5e6076);
+      span {
+        @include font(14, 17, 500, normal, #5e6076);
+        padding: 7px;
+        background-color: #fafafa;
+        border-radius: 7px;
+      }
+      a {
+        margin-left: 10px;
+      }
+    }
+
+    .icon_menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 21px;
+      height: 10px;
+      p {
+        background-color: #da552f;
+        height: 1px;
+      }
+    }
+  }
+}

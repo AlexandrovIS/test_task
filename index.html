@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+
+<div class="wrapper">
+
+
+  <header class="header">
+    <ul class="header_list">
+      <li><a href="./"><img src="./cdn/head_icon.svg" width="195" height="37" alt="logo"></a></li>
+      <li>
+        <ul class="nav_links">
+          <li><a href="#">Ипотека</a></li>
+          <li><a href="#">О группе компаний</a></li>
+          <li><a href="#">Нвости и акции</a></li>
+          <li><a href="#">Тендеры</a></li>
+          <li><a href="#">Коммерческие помещения</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </li>
+      <li><button type="#" class="header_btn">Проекты</button></li>
+      <li class="status">Live</li>
+      <li class="tel_info"><span>Заказать звонок</span><a href="tel:+78123097777"> +7 812 309-77-77</a></li>
+      <li class="icon_heard">
+        <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.6214 0C12.0554 0 10.5524 0.750409 9.57141 1.93624C8.59041 0.750409 7.08741 0 5.52141 0C2.74941 0 0.571411 2.24196 0.571411 5.09537C0.571411 8.59727 3.63141 11.4507 8.26641 15.7864L9.57141 17L10.8764 15.7771C15.5114 11.4507 18.5714 8.59727 18.5714 5.09537C18.5714 2.24196 16.3934 0 13.6214 0ZM9.66141 14.406L9.57141 14.4986L9.48141 14.406C5.19741 10.4131 2.37141 7.77275 2.37141 5.09537C2.37141 3.24251 3.72141 1.85286 5.52141 1.85286C6.90741 1.85286 8.25741 2.77003 8.73441 4.03924H10.4174C10.8854 2.77003 12.2354 1.85286 13.6214 1.85286C15.4214 1.85286 16.7714 3.24251 16.7714 5.09537C16.7714 7.77275 13.9454 10.4131 9.66141 14.406Z" fill="#5E6076"/>
+          </svg>
+      </li>
+      <li class="icon_loop">
+        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.4354 10.6918H11.6676L11.3954 10.4294C12.348 9.32133 12.9214 7.88279 12.9214 6.3179C12.9214 2.82847 10.093 0 6.60354 0C3.11412 0 0.285645 2.82847 0.285645 6.3179C0.285645 9.80732 3.11412 12.6358 6.60354 12.6358C8.16844 12.6358 9.60697 12.0623 10.715 11.1098L10.9775 11.3819V12.1498L15.8374 17L17.2856 15.5517L12.4354 10.6918ZM6.60354 10.6918C4.1833 10.6918 2.22961 8.73814 2.22961 6.3179C2.22961 3.89766 4.1833 1.94397 6.60354 1.94397C9.02378 1.94397 10.9775 3.89766 10.9775 6.3179C10.9775 8.73814 9.02378 10.6918 6.60354 10.6918Z" fill="#5E6076"/>
+          </svg>
+      </li>
+      <li class="icon_menu">
+        <p></p>
+        <p></p>
+        <p></p>
+    </li>
+    </ul>
+  </header>
+  <main class="main">
+    <section>
+      <h2 class="goods_header">Найдено <span id="projectCounter"></span> проекта(ов)</h2>
+      <div id="app">
+        <ul class="object_list" id="object_list">
+          
+       
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h2 class="visually-hidden">advertisement box</h2>
+      <div class="advertisement_background">
+
+        <div class="advertisement-box">
+        
+            <div class="advertisement-box__title">
+              <img src="./cdn/icon.svg" alt="icon" width="207" height="50">
+            </div>
+
+          <ul class="advertisement-box__list">
+            <li>4</li>
+            <li>678</li>
+            <li>3,26</li>
+          </ul>
+          <ul class="advertisement-box__sublist">
+            <li>проекта</li>
+            <li>предложений</li>
+            <li>от млн. &#8381;</li>
+          </ul>
+          
+          <div>
+            <button class="advertisement-box__btn">Перейти к проектам</button>
+          </div>
+         
+        </div>
+
+      </div>
+    </section>
+  </main>
+  <div  class="filter_grid">
+   <div class="filter" id="filter">
+    <ul class="rooms_list" id="numOfRoomsList">
+      <li data-room='студия'>Студия</li>
+      <li data-room='1'>1</li>
+      <li data-room='2'>2</li>
+      <li data-room='3'>3+</li>
+    </ul>
+
+    <form id="priceForm">
+      <ul class="price_list">
+        <li>
+          <span>Цена от</span>
+          <input 
+            type="text"
+            name="amountInputMin" 
+            id="inputMinPrice"
+            
+            oninput="this.form.amountRangeMin.value=this.value" />
+        </li>
+        <li>
+          <span>до</span>
+          <input 
+            type="text" 
+            id="inputMaxPrice"
+            name="amountInputMax" 
+            
+            oninput="this.form.amountRange.value=this.value" />
+          <span>	
+          &#8381;</span>
+        </li>
+      </ul>          
+      <ul class="range_list">
+        <li>
+          <input 
+            type="range" 
+            id="rangeMinPrice"
+            class="rangeMinPrice"
+            name="amountRangeMin" 
+           
+            oninput="this.form.amountInputMin.value=this.value" />
+        </li>
+        <li>
+          <input 
+            type="range" 
+            id="rangeMaxPrice"
+            class="rangeMaxPrice"
+            name="amountRangeMax" 
+           
+            oninput="this.form.amountInputMax.value=this.value" />
+        </li>
+      </ul>
+   </form>
+ 
+    <ul class="delivery_list" id="delivery">
+      <li>
+        <input type="checkbox" name="select-delivery" id="03" value="delivery_03">
+        <label for="03">1 квартал 2022</label>
+      </li>
+      <li>
+        <input type="checkbox" name="select-delivery" id="06" value="delivery_06">
+        <label for="06">2 квартал 2022</label>
+      </li>
+      <li>
+        <input type="checkbox" name="select-delivery" id="09" value="delivery_09">
+        <label for="09">3 квартал 2022</label>
+      </li>
+      <li data-delivery='12'>
+        <input type="checkbox" name="select-delivery" id="12" value="delivery_12">
+        <label for="12">До конца года</label>
+      </li>
+    </ul>
+
+    <ul class="district_list" id="district">
+      <li><span>Район метро</span> 
+
+        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path opacity="0.3" d="M12.1498 10.6918H11.3819L11.1098 10.4294C12.0623 9.32133 12.6358 7.88279 12.6358 6.3179C12.6358 2.82847 9.80732 0 6.3179 0C2.82847 0 0 2.82847 0 6.3179C0 9.80732 2.82847 12.6358 6.3179 12.6358C7.88279 12.6358 9.32133 12.0623 10.4294 11.1098L10.6918 11.3819V12.1498L15.5517 17L17 15.5517L12.1498 10.6918ZM6.3179 10.6918C3.89766 10.6918 1.94397 8.73814 1.94397 6.3179C1.94397 3.89766 3.89766 1.94397 6.3179 1.94397C8.73814 1.94397 10.6918 3.89766 10.6918 6.3179C10.6918 8.73814 8.73814 10.6918 6.3179 10.6918Z" fill="#abadc5"/>
+          </svg>
+
+      </li>
+    </ul>
+
+    <div class="formBtn">
+      <span>20 проектов</span>
+      <button id="getFormInfo" class="filter_btn">Показать</button>
+    </div>
+   </div>
+        
+      
+
+  </div>
+  <footer class="footer">
+    <div class="footer_top">
+      <div class="footer_top__list">
+        <div><h3>ГК Новоселье</h3>
+          <ul>
+            <li><a href="#"></a>ЖК Дуэт</li>
+            <li><a href="#">ЖК Эпсилон</a></li>
+            <li><a href="#">ЖК ЕТА</a></li>
+            <li><a href="#">ЖК Уютный</a></li>
+          </ul>
+        </div>
+        <div><h3>Партнеры</h3>
+          <ul>
+            <li><a href="#">ЖК Эгоист</a></li>
+            <li><a href="#">ЖК Выборгский</a></li> 
+            <li><a href="#">ЖК Партнера</a></li>
+          </ul>
+        </div>
+        <ul class="footer_top__list-links">
+          <li><a href="#">О компании</a> </li>
+          <li><a href="#">Пресс-релизы</a> </li>
+          <li><a href="#">Контакты</a></li>
+          <li><a href="#">Тендеры</a></li>
+          <li><a href="#">Коммерческие помещения</a></li>
+        </ul>
+      </div>
+      <div class="footer_top__media">
+        <ul>
+          <li><a href="#">vkontakte</a></li>
+          <li><a href="">facebook</a></li>
+          <li><a href="">instagram</a></li>
+          <li><a href="">youtube</a></li>
+        </ul>
+      </div>
+      <div class="footer_top__form">
+        <p class="form_header">Подпишитесь на обновления по проектам</p>
+        <div class="form_subscribe">
+          <input type="email" placeholder="Email">
+          <button type="#">Подписаться</button>
+
+        </div>
+        <p class="form_describ">Нажимая кнопку «Подписаться» вы даете свое согласие на обработку персональных данных</p>
+
+      </div>
+    </div>
+    <div class="footer_bottom">
+      <ul class="footer_bottom__list">
+        <li>&#169 n-gk.ru, 2022</li>
+        <li>Разработка сайта – cake.ru</li>
+      </ul>
+    </div>
+  </footer>
+</div>
+  <script src="app.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
